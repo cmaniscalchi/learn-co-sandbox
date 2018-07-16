@@ -1,0 +1,49 @@
+Starting Errors:
+
+1) Rock Dodger checkCollision(rock) rock is > 360px from the top of GAME collides if the rock's left edge is <= the DODGER's left edge and the rock's right edge is >= the DODGER's left edge:
+     Error: Expected undefined to be true
+      
+  2) Rock Dodger checkCollision(rock) rock is > 360px from the top of GAME collides if the rock's left edge is >= the DODGER's left edge and the rock's right edge is <= the DODGER's right edge:
+     Error: Expected undefined to be true
+
+  3) Rock Dodger checkCollision(rock) rock is > 360px from the top of GAME collides if the rock's left edge is <= the DODGER's right edge and the rock's right edge is >= the DODGER's right edge:
+     Error: Expected undefined to be true
+
+  4) Rock Dodger createRock(x) calls window.requestAnimationFrame():
+     Error: spy was not called
+
+  5) Rock Dodger createRock(x) moveRock() checks for a collision:
+     Error: spy was not called
+
+  6) Rock Dodger createRock(x) moveRock() ends the game if there is a collision:
+     Error: spy was not called
+
+  7) Rock Dodger endGame() clears gameInterval:
+     Error: spy was not called
+
+  8) Rock Dodger endGame() removes all of the rocks:
+     Error: spy was not called
+
+  9) Rock Dodger endGame() removes the "keydown" event listener:
+     Error: spy was never called with [ 'keydown', [Function: moveDodger] ]
+
+  10) Rock Dodger moveDodger(e) e.which === LEFT_ARROW calls e.preventDefault():
+     Error: spy was not called
+
+  11) Rock Dodger moveDodger(e) e.which === LEFT_ARROW calls e.stopPropagation():
+     Error: spy was not called
+
+  12) Rock Dodger moveDodger(e) e.which === LEFT_ARROW calls moveDodgerLeft():
+     Error: spy was not called
+
+  13) Rock Dodger moveDodger(e) e.which === RIGHT_ARROW calls e.preventDefault():
+     Error: spy was not called
+
+  14) Rock Dodger moveDodger(e) e.which === RIGHT_ARROW calls moveDodgerRight():
+     Error: spy was not called
+
+  15) Rock Dodger moveDodgerLeft() moves the DODGER to the left:
+     Error: Expected 180 to be less than 180
+
+  16) Rock Dodger moveDodgerRight moves the DODGER to the right:
+     Error: Expected 180 to be greater than 180
